@@ -6,6 +6,7 @@
 
 This app imagines a specialty grocery store that allows users to review products; its goal is to illustrate a many-to-one relationship in SQL. It also aims to illustrate CRUD functionality, Rails, and routing.
 The app also uses the Devise gem to allow users and admin to log in and out and alter content.
+Seeding the databases with ```rake db:seed``` will create 50 products each with 5 reviews, as well as 5 products called 'Bagel', an admin with the email 'adminfriend@admin.com' and password 'asdfasdf', and a non-admin user with the same password and the email 'userfriend@user.com' (for testing).
 
 ## Specs
 
