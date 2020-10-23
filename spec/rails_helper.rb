@@ -69,4 +69,10 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+
+RSpec.configure do |config|
+  config.before(:suite) do
+    Rails.application.load_seed # loading seeds
+  end
+end
 end
