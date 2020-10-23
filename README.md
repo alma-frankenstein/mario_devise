@@ -33,6 +33,11 @@ Seed the databases: ```rake db:seed```
 
 View the app in the server: ```rails s```
 
+To make a certain user an admin:
+run ```rails c``` to open a ruby console
+```User.all``` to see the users and their IDs
+```User.find(id).update :admin => true``` where 'id' is the integer of their ID number
+
 ## Technologies Used
 
 * Ruby
