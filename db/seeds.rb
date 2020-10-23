@@ -13,18 +13,18 @@ User.destroy_all
 User.create!(email: 'adminfriend@admin.com', password: 'asdfasdf', admin: true)
 User.create!(email: 'userfriend@user.com', password: 'asdfasdf', admin: false)
 
-5.times do |bagel|
-  Product.create!(name: 'Bagel', cost: rand(1..5), country_of_origin: Faker::Address.country)
-end
+Product.create!(name: 'Bagel', cost: rand(1..5), country_of_origin: Faker::Address.country)
+Product.create!(name: 'Lox', cost: rand(1..5), country_of_origin: Faker::Address.country)
+Product.create!(name: 'Kugel', cost: rand(1..5), country_of_origin: Faker::Address.country)
 
-50.times do |index|
+
+10.times do |index|
   Product.create!(name: Faker::Food.dish, cost: rand(1..5), country_of_origin: Faker::Address.country)
 end
 
 Product.all.each do |product|
 5.times do |index|
-  # product.reviews.create!(content_body: Faker::Lorem.characters(number: 80, min_alpha: 0, min_numeric: 0).chop, author: Faker::Lorem.characters(number: 10, min_alpha: 10, min_numeric: 0).chop,rating: rand(1..5))
-  product.reviews.create!(content_body: Faker::Lorem.characters(number: 80, min_alpha: 0, min_numeric: 0).chop, author: Faker::Name.first_name,rating: rand(1..5)) 
+  product.reviews.create!(content_body: Faker::Quote.matz, author: Faker::Name.first_name,rating: rand(1..5)) 
  
   end
 end
