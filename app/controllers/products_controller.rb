@@ -1,11 +1,17 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index]
+  before_action :only => [:new, :edit] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
 
   def require_admin
     if !current_user.admin?
-          redirect_to benefits_path
+      redirect_to benefits_path
     end
   end
+
+  # def is_admin?
+  #   current_user && current_user.admin
+  # end
 
 # landing page, show all products
   def index
@@ -58,7 +64,9 @@ class ProductsController < ApplicationController
 # delete a product
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
+    if current_user.admin?
+      @product.destroy
+    end
     redirect_to products_path
   end
 
