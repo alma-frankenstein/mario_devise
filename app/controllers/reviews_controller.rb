@@ -43,7 +43,9 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    @review.destroy
+    if current_user.admin?
+      @review.destroy
+    end
     redirect_to product_path(@review.product)
   end
 
