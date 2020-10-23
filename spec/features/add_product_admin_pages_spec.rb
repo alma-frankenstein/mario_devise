@@ -5,7 +5,7 @@ require 'rails_helper'
 describe "add a new product" do
   it "adds a new product" do
     visit products_path
-    fill_in 'Email', :with => 'adminFriend@admin.com'
+    fill_in 'Email', :with => 'adminfriend@admin.com'
     fill_in 'Password', :with => 'asdfasdf'
     click_on 'Log in'
     expect(page).to have_content 'Welcome'

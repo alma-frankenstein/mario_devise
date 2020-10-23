@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "add a review to a product" do
   it "adds a review to a product" do
     visit products_path
-    fill_in 'Email', :with => 'adminFriend@admin.com'
+    fill_in 'Email', :with => 'adminfriend@admin.com'
     fill_in 'Password', :with => 'asdfasdf'
     click_on 'Log in'
 
