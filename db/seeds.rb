@@ -10,8 +10,12 @@ Product.destroy_all
 Review.destroy_all
 User.destroy_all
 
-User.create!(email: 'adminFriend@admin.com', password: 'asdfasdf', admin: true)
-User.create!(email: 'userFriend@user.com', password: 'asdfasdf', admin: false)
+User.create!(email: 'adminfriend@admin.com', password: 'asdfasdf', admin: true)
+User.create!(email: 'userfriend@user.com', password: 'asdfasdf', admin: false)
+
+5.times do |bagel|
+  Product.create!(name: 'Bagel', cost: rand(1..5), country_of_origin: Faker::Address.country)
+end
 
 50.times do |index|
   Product.create!(name: Faker::Food.dish, cost: rand(1..5), country_of_origin: Faker::Address.country)
