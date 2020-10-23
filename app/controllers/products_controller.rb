@@ -1,4 +1,11 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
+
+  def require_admin
+    if !current_user.admin?
+          redirect_to benefits_path
+    end
+  end
 
 # landing page, show all products
   def index
