@@ -5,11 +5,13 @@
 ## Description
 
 This app imagines a specialty grocery store that allows users to review products; its goal is to illustrate a many-to-one relationship in SQL. It also aims to illustrate CRUD functionality, Rails, and routing.
+The app also uses the Devise gem to allow users and admin to log in and out and alter content.
 
 ## Specs
 
-* Allows users to add, update, and delete products
-* Allows users to add, update, and delete reviews for products
+* Allows an admin to add, update, and delete products
+* Allows an admin to add, update, and delete reviews for products
+* Allows a user to add reviews to products
 
 ## Setup
 
@@ -38,6 +40,7 @@ View the app in the server: ```rails s```
 * Rails
 * Capybara
 * SQL
+* devise
 
 ## Contact Details
 
