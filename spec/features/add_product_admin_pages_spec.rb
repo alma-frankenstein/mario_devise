@@ -1,5 +1,3 @@
-# admin sign-in will only work if 'rails db:seed' has been run
-
 require 'rails_helper'
 
 describe "add a new product" do

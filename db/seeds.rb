@@ -16,6 +16,8 @@ User.create!(email: 'userfriend@user.com', password: 'asdfasdf', admin: false)
 Product.create!(name: 'Bagel', cost: rand(1..5), country_of_origin: Faker::Address.country)
 Product.create!(name: 'Lox', cost: rand(1..5), country_of_origin: Faker::Address.country)
 Product.create!(name: 'Kugel', cost: rand(1..5), country_of_origin: Faker::Address.country)
+Product.create!(name: 'Schmaltz', cost: rand(1..5), country_of_origin: Faker::Address.country)
+Product.create!(name: 'Herring', cost: rand(1..5), country_of_origin: Faker::Address.country)
 
 
 10.times do |index|

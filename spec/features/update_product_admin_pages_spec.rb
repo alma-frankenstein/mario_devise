@@ -7,11 +7,6 @@ describe "updates a product" do
     fill_in 'Password', :with => 'asdfasdf'
     click_on 'Log in'
 
-    # click_link 'Add new product'
-    # fill_in 'Name', :with => 'Tater tots'
-    # fill_in 'Cost', :with => '2'
-    # fill_in 'Country of origin', :with => 'Mexico'
-    # click_on 'Create Product'
     click_on 'Herring'
     click_on 'Edit name of product'
     fill_in 'Name', :with => 'Matzo'

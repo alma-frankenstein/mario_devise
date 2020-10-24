@@ -1,5 +1,3 @@
-# admin sign-in will only work if 'rails db:seed' has been run
-
 require 'rails_helper'
 
 describe "log in as admin" do

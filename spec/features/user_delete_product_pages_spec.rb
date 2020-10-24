@@ -8,8 +8,6 @@ describe "if a non-admin tries to delete, they're directed back to the products 
     click_on 'Log in'
 
     click_on 'Kugel'
-    #click_on 'Edit name of product'
-    #fill_in 'Name', :with => 'Bagel'
     click_on 'Delete this product'
     expect(page).to have_content 'Kugel'
 
